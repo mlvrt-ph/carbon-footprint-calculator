@@ -83,7 +83,8 @@ function printValue() {
     var name = getValue('name');
     var totalCO2Emission = trans + energy + water + waste + diet;
     document.getElementById('result').innerHTML = 'Hi ' + name + '!' +
-    '<br>CO2 Emission: ' + totalCO2Emission.toFixed(3) + ' kg';
+    '<br>CO2 Emission: ' + totalCO2Emission.toFixed(3) + ' kg' +
+    '<br>You have a ' + classifyValue(totalCO2Emission) + ' Carbon Footprint';
 }
 
 function openModal() {
@@ -98,4 +99,14 @@ function openModal() {
 function closeModal() {
     var modal = document.getElementById("myModal");
     modal.style.display = "none";
+}
+
+function classifyValue(value) {
+    if (value < 5) {
+        return 'Low';
+    } else if (value > 15){
+        return 'High';
+    } else {
+        return 'Average';
+    }
 }
