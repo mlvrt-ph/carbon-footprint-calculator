@@ -1,0 +1,238 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap');
+
+body {
+    background: linear-gradient(to right, #093028, #237a57);
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.6;
+    color: whitesmoke;
+}
+
+h1 {
+    text-align: center;
+    font-size: 36px;
+    color: #ccc;
+    margin-bottom: 30px;
+}
+
+.containers {
+    max-width: 1000px;
+    margin: 0 auto; /* Center the container */
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+}
+
+.faq {
+    padding: 20px;
+    background-color:rgba(255, 255, 255, 0.8);
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    font-size: 20px;
+    color: #000;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 16px;
+    color: #333;
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    border: none;
+    margin-top: 0;
+    padding-top: 20px;
+}
+
+/* Label styles */
+.label {
+    font-family: "Montserrat", sans-serif;
+    font-weight: lighter;
+    margin-bottom: 5px;
+}
+
+/* Input styles */
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+    font-family: "Montserrat", sans-serif;
+    color: black;
+}
+
+#myButton {
+    font-family: "Montserrat", sans-serif;
+    display: inline-block;
+    padding: 10px 14px;
+    border-radius: 20px;
+    background-color: #000000;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+select {
+    font-family: "Montserrat", sans-serif;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 12px;
+    width: 100%;
+    max-width: 250px;
+    box-sizing: border-box;
+    appearance: none;
+    background-color: white;
+    background-image: url('data:image/svg+xml;utf8,<svg fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke="currentColor"><path d="M19 9l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/></svg>');
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+}
+
+option {
+    padding: 10px;
+}
+
+header {
+    background-color: transparent;
+    color: #fff;
+    padding: 20px;
+    font-family: 'Montserrat', sans-serif;
+    text-align: right;
+}
+
+nav {
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+    padding: 30px;
+    margin: -28px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-text {
+    color: #fff;
+    font-size: 24px;
+    margin-right: 20px;
+    margin-left: 20px;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline-block;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+nav ul li a {
+    display: inline-block;
+    color: #fff;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    color: #000;
+}
+
+/* Modal styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4); /* Semi-transparent black background */
+}
+
+/* Modal content styles */
+.modal-content {
+    background-color: #fefefe;
+    padding: 30px;
+    border-radius: 10px;
+    width: 70%; /* Adjust width as needed */
+    max-width: 600px; /* Limit maximum width */
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    color: black;
+}
+
+/* Close button styles */
+.close {
+    color: #aaa;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.input-wrapper {
+    position: relative;
+    margin-bottom: 10px; /* Adjust spacing between input fields */
+}
+
+.hover-icon {
+    position: absolute;
+    right: -50px; /* Adjust the distance of the icon from the input field */
+    bottom: 20px;
+}
+
+.icon {
+    width: 20px;
+    height: 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.instruction {
+    display: none;
+    position: absolute;
+    bottom: -30px;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    width: 400px;
+}
+
+.hover-icon:hover .instruction {
+    display: block;
+}
+
+.icon-text {
+    font-size: 14px; /* Adjust the font size */
+    color: white; /* Set the color */
+    font-weight: bold; /* Make it bold */
+    text-align: center; /* Center the text */
+    line-height: 20px; /* Align vertically */
+}

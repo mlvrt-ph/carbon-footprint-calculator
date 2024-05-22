@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carbon Footprint Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="index.js"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <span class="nav-text">Carbon Lodi</span>
+            <ul>
+                <li><a href="index.html">Calculator</a></li>
+                <li><a href="faqs.html">FAQs</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- Put header here the br is only temporary -->
+    <br> <br> <br>
+    <div class="container">
+        <div class="label" id="name1"> Name: </div>
+        <input type="text" id="name" name="name" placeholder="Enter your name">
+
+        <div class="input-wrapper">
+            <div class="label" id="transpo1"> Transportation: </div>
+            <input type="text" id="transpo" name="transpo" placeholder="Enter your daily distance traveled in kilometers">
+            <div class="hover-icon">
+                <div class="icon">
+                    <span class="instruction">To calculate your transportation, measure the distance you travel daily in kilometers.</span>
+                    <span class="icon-text">i</span>
+                </div>
+            </div>
+        </div>
+
+        <select id="transportationType" name="transportationType">
+            <option value="bike">Motorbike</option>
+            <option value="car">Car</option>
+            <option value="public">Public Transportation</option>
+            <option value="walk">Walking / Cycling</option>
+        </select> <br> <br>
+
+        <div class="input-wrapper">
+            <div class="label" id="energy1"> Energy Usage: </div>
+            <input type="text" id="energy" name="energy" placeholder="Enter your daily kilowatt-hour consumption">
+            <div class="hover-icon">
+                <div class="icon">
+                    <span class="instruction">To calculate your energy consumption, check your electricity bill to find the total kilowatt-hour consumption 
+                        and then divide the total consumption by the number of people in your household.</span>
+                    <span class="icon-text">i</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="input-wrapper">
+            <div class="label" id="water1"> Water Usage: </div>
+            <input type="text" id="water" name="water" placeholder="Enter your daily water usage in cubic meters">
+            <div class="hover-icon">
+                <div class="icon">
+                    <span class="instruction">To calculate your water consumption, check your water bill to find the total amount of water consumed (in cubic meters)
+                        and then divide the total consumption by the number of people in your household.</span>
+                    <span class="icon-text">i</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="input-wrapper">
+            <div class="label" id="waste1"> Waste Management: </div>
+            <input type="text" id="waste" name="waste" placeholder="Enter your daily waste amount in kilograms">
+            <div class="hover-icon">
+                <div class="icon">
+                    <span class="instruction">To calculate your waste, estimate your household weekly waste then divide it by 7 and the number of people in your household. Average weekly waste production per person: Low 1 kg, Moderate 2 kg, High 3 kg.</span>
+                    <span class="icon-text">i</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="input-wrapper">
+            <div class="label" id="diet1"> Diet: </div>
+            <input type="text" id="diet" name="diet" placeholder="Enter your daily meat consumption in kilograms">
+            <div class="hover-icon">
+                <div class="icon">
+                    <span class="instruction">To calculate your meat consumption, estimate your daily meat consumption in kilograms. Average daily meat consumption: Low (vegetarian/vegan) 0 kg, Moderate 0.033 kg, High 0.067 kg.</span>
+                    <span class="icon-text">i</span>
+                </div>
+            </div>
+        </div>
+
+        <button id="myButton" onclick="openModal()">Calculate</button>
+    
+    </div>
+
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <div id="result"></div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
