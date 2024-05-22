@@ -84,7 +84,7 @@ function printValue() {
     var totalCO2Emission = trans + energy + water + waste + diet;
     document.getElementById('result').innerHTML = 'Hi ' + name + '!' +
     '<br>CO2 Emission: ' + totalCO2Emission.toFixed(3) + ' kg' +
-    '<br>You have a ' + classifyValue(totalCO2Emission) + ' Carbon Footprint';
+    "<br>You're carbon footprint is  " + classifyValue(totalCO2Emission);
 }
 
 function openModal() {
